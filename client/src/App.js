@@ -1,16 +1,11 @@
-import { useEffect, useState } from "react";
+import * as React from 'react';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import MapComponent from './MapComponent';
 
 function App() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch(process.env.REACT_APP_API_URL) 
-      .then((res) => res.text())
-      .then((data) => setData(data))
-      .catch((err) => console.error("Error:", err));
-  }, []);
-
-  return <div>{data ? data : "Loading..."}</div>;
+  return (
+    <MapComponent></MapComponent>
+  );
 }
 
 export default App;
