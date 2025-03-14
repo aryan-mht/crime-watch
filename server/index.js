@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json())
 
 // Routes
-app.use("/crimeData", crimeDataRoutes) 
+app.use("/data", crimeDataRoutes) 
 
 app.get("/", (req, res) => {
     res.send("Server is Running!");
